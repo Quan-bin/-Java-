@@ -1,0 +1,63 @@
+package Bin;
+import java.util.Random;
+import java.util.Scanner;
+public class Demo03 {
+	public static void main(String[] args) {
+		Random r = new Random();
+		int randomNum = r.nextInt(3);
+		System.out.println("游戏开始！请输入你猜测的数字是（0、1、2）其中0 代表石头，1代表剪刀，2代表布：");
+	Scanner sc =new Scanner(System.in) ;
+	int num =sc.nextInt();
+	String me = new String();
+	String Ai;
+	if(num==0) {
+			me = "石头";
+	}else if(num==1){
+			me ="剪刀";
+	}else if(num==2) {
+			 me ="布";
+	}else {
+		System.out.println("错误！请符合前提下重新输入");
+	}
+	if(randomNum==0) {
+			 Ai = "石头";
+	}else if(randomNum==1){
+			 Ai ="剪刀";
+	}else  {
+			 Ai ="布";
+	}
+	switch (num) {
+			case 0:
+				
+			System.out.println("你出的是：" +me+"; 电脑出的是："+Ai);
+				break;
+			case 1:
+				System.out.println("你出的是："+me+"; 电脑出的是："+Ai);
+				break;
+			case 2:
+				System.out.println("你出的是："+me+"; 电脑出的是："+Ai);
+				break;
+		
+		}
+	if(num==0 && randomNum==1) {
+			System.out.println("恭喜你！！你赢了");
+	}else if(num==1 && randomNum==2){
+			System.out.println("恭喜你！！你赢了");
+	}else if(num==0 && randomNum==2) {
+			System.out.println("电脑赢了");
+	}else if(num==2 && randomNum==2) {
+			System.out.println("平局");
+	}else if(num==0 && randomNum==0) {
+			System.out.println("平局");
+	}else if(num==1 && randomNum==1) {
+			System.out.println("平局");
+	}else if(num==1 && randomNum==0) {
+			System.out.println("电脑赢了");
+	}else if(num==2 && randomNum==0) {
+			System.out.println("恭喜你！！你赢了");
+	}else if(num==2 && randomNum==1) {
+			System.out.println("电脑赢了");
+		}
+	}
+}
+
